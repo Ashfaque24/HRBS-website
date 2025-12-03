@@ -82,18 +82,25 @@ const CoursesSection = () => {
             md={4}
             sx={{ display: "flex" }}
           >
-            <Card
-              sx={{
-                borderRadius: 3,
-                overflow: "hidden",
-                boxShadow: "0 16px 30px rgba(15, 23, 42, 0.08)",
-                display: "flex",
-                flexDirection: "column",
-                height: "100%",
-                maxWidth: 400,
-                cursor: "pointer",
-              }}
-            >
+<Card
+  sx={{
+    borderRadius: 3,
+    overflow: "hidden",
+    boxShadow: "0 16px 30px rgba(15, 23, 42, 0.08)",
+    display: "flex",
+    flexDirection: "column",
+    height: "100%",
+    maxWidth: 400,
+    cursor: "pointer",
+    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+    "&:hover": {
+      transform: "scale(1.05)",
+      boxShadow: "0 20px 40px rgba(15, 23, 42, 0.15)",
+      zIndex: 1,
+    },
+  }}
+>
+
               <Box
                 sx={{
                   position: "relative",

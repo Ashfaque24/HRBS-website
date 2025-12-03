@@ -45,8 +45,8 @@ const ConsultancySection = () => {
           variant="body1"
           sx={{ color: "text.secondary", maxWidth: 600, mx: "auto" }}
         >
-          Comprehensive HR solutions tailored to your organization&apos;s
-          unique needs.
+          Comprehensive HR solutions tailored to your organization&apos;s unique
+          needs.
         </Typography>
       </Box>
 
@@ -54,7 +54,7 @@ const ConsultancySection = () => {
       <Grid
         container
         spacing={3}
-        justifyContent="center"     // center the whole grid
+        justifyContent="center" // center the whole grid
       >
         {services.map((service) => (
           <Grid
@@ -67,10 +67,15 @@ const ConsultancySection = () => {
             <Card
               sx={{
                 width: "100%",
-                maxWidth: 520, // nice readable width, same for all
+                maxWidth: 520,
                 borderRadius: 3,
                 boxShadow: "0 18px 40px rgba(15, 23, 42, 0.08)",
                 borderLeft: "4px solid #00b894",
+                transition: "transform 0.25s ease, box-shadow 0.25s ease",
+                "&:hover": {
+                  transform: "translateY(-6px) scale(1.02)",
+                  boxShadow: "0 24px 60px rgba(15, 23, 42, 0.16)",
+                },
               }}
             >
               <CardContent sx={{ p: { xs: 3, md: 4 } }}>

@@ -13,7 +13,8 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "'Roboto', sans-serif",
+    fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
+
     h1: {
       fontSize: "2.5rem",
       fontWeight: 700,
