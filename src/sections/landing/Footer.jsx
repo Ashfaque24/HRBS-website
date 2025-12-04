@@ -16,7 +16,7 @@ const Footer = () => {
         color: "#fff",
         px: { xs: 3, md: 8 },
         py: { xs: 4, md: 4 },
-        mt: 6,
+        // mt: 6,
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         justifyContent: "space-between",
