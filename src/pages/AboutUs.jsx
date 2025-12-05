@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 import HeroBg from "../assets/office logo 2.jpg";
 import aboutusimg1 from "../assets/About  us/about us image 1.jpg";
 import founder from "../assets/About  us/CEO1.jpg";
+import aboutusimage2 from "../assets/About  us/about us image 2.jpg";
 
 
 const AboutUs = () => {
@@ -13,7 +14,7 @@ const AboutUs = () => {
         sx={{
           height: { xs: 200, md: 300 },
           position: "relative",
-          backgroundImage: `url(${HeroBg})`,
+          backgroundImage: `url(${aboutusimage2})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "flex",
@@ -55,16 +56,21 @@ const AboutUs = () => {
       >
         {/* Left: Text block */}
         <Box sx={{ flex: 1 }}>
-          <Typography
-            variant="h4"
-            sx={{
-              fontWeight: 700,
-              mb: 3,
-              color: "#111827",
-            }}
-          >
-            What is HRBS?
-          </Typography>
+        <Typography
+    variant="h4"
+    sx={{
+      fontWeight: 700,
+      mb: 3,
+      color: "#111827",
+    }}
+  >
+    What is{" "}
+    <span style={{ color: "#1e9c73" }}>H</span>
+    <span style={{ color: "#1e7a5b" }}>R</span>
+    <span style={{ color: "#3b82f6" }}>B</span>
+    <span style={{ color: "#1e7a5b" }}>S</span>
+    ?
+  </Typography>
 
           <Typography
             variant="h6"
@@ -153,13 +159,17 @@ const AboutUs = () => {
         {/* Mission card */}
         <Box
           sx={{
-            bgcolor: "#ffffff",
+            bgcolor: "rgba(126, 152, 238, 0.47)",
             borderRadius: 4,
             boxShadow: "0 18px 45px rgba(15, 23, 42, 0.08)",
             px: { xs: 3, md: 6 },
             py: { xs: 4, md: 5 },
             mb: { xs: 4, md: 5 },
             textAlign: "center",
+            transition: "transform 0.25s ease, box-shadow 0.25s ease",
+            "&:hover": {
+              transform: "translateY(-6px) scale(1.02)",
+              boxShadow: "0 24px 60px rgba(15, 23, 42, 0.16)",}
           }}
         >
           <Typography
@@ -181,12 +191,16 @@ const AboutUs = () => {
         {/* Vision card */}
         <Box
           sx={{
-            bgcolor: "#ffffff",
+            bgcolor: "rgba(97, 224, 129, 0.57)",
             borderRadius: 4,
             boxShadow: "0 18px 45px rgba(15, 23, 42, 0.08)",
             px: { xs: 3, md: 6 },
             py: { xs: 4, md: 5 },
             textAlign: "center",
+            transition: "transform 0.25s ease, box-shadow 0.25s ease",
+            "&:hover": {
+              transform: "translateY(-6px) scale(1.02)",
+              boxShadow: "0 24px 60px rgba(15, 23, 42, 0.16)",}
           }}
         >
           <Typography
@@ -224,9 +238,11 @@ const AboutUs = () => {
       textAlign: "center",
       mb: 4,
       color: "#111827",
+      
+      
     }}
   >
-    Founder
+    Our Founder
   </Typography>
 
   {/* Card */}
@@ -239,6 +255,11 @@ const AboutUs = () => {
       flexDirection: { xs: "column", md: "row" },
       alignItems: { xs: "flex-start", md: "center" },
       gap: { xs: 4, md: 6 },
+      borderLeft: "4px solid #00b894",
+      transition: "transform 0.25s ease, box-shadow 0.25s ease",
+      "&:hover": {
+        transform: "translateY(-6px) scale(1.02)",
+        boxShadow: "0 24px 60px rgba(15, 23, 42, 0.16)",}
     }}
   >
     <Box
@@ -251,6 +272,7 @@ const AboutUs = () => {
         objectFit: "cover",
         borderRadius: { xs: "12px 12px 0 0", md: "12px 0 0 12px" },
         display: "block",
+        
       }}
     />
 

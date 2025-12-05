@@ -5,11 +5,11 @@
 //   Toolbar,
 //   Box,
 //   Button,
-//   IconButton, // Import IconButton
-//   Menu, // Import Menu
-//   MenuItem, // Import MenuItem
+//   IconButton,
+//   Menu,
+//   MenuItem,
 // } from "@mui/material";
-// import MenuIcon from "@mui/icons-material/Menu"; // Import MenuIcon (Hamburger)
+// import MenuIcon from "@mui/icons-material/Menu";
 // import { useNavigate, useLocation } from "react-router-dom";
 // import Logo from "../../assets/Short Logo.png";
 
@@ -17,10 +17,8 @@
 //   const navigate = useNavigate();
 //   const location = useLocation();
 
-//   // State for the mobile menu anchor element
 //   const [anchorElNav, setAnchorElNav] = useState(null);
 
-//   // Handlers for opening and closing the mobile menu
 //   const handleOpenNavMenu = (event) => {
 //     setAnchorElNav(event.currentTarget);
 //   };
@@ -30,27 +28,22 @@
 //   };
 
 //   const goHomeAndScroll = (hash) => {
-//     // Close menu before navigating/scrolling on mobile
-//     handleCloseNavMenu(); 
+//     handleCloseNavMenu();
 
 //     if (location.pathname === "/") {
-//       // already on landing – just scroll
 //       if (hash === "#courses") onCoursesClick?.();
 //       else if (hash === "#consultancy") onConsultancyClick?.();
 //       else onHomeClick?.();
 //     } else {
-//       // go to landing with hash, LandingPage will handle scroll
 //       navigate(`/${hash}`);
 //     }
 //   };
 
 //   const handleNavigation = (path) => {
-//     // Close menu before navigating
-//     handleCloseNavMenu(); 
+//     handleCloseNavMenu();
 //     navigate(path);
 //   };
 
-//   // Define the navigation items for reuse
 //   const navItems = [
 //     { label: "Home", onClick: () => goHomeAndScroll("") },
 //     { label: "Courses", onClick: () => goHomeAndScroll("#courses") },
@@ -60,9 +53,9 @@
 //   ];
 
 //   return (
-//     <AppBar position="static" color="default" elevation={1} sx={{ borderRadius: 0 }}>
+//     <AppBar position="static" color="transparent" elevation={1} sx={{ borderRadius: 0,bgcolor: "#ffffff",  }}>
 //       <Toolbar sx={{ px: { xs: 1.5, sm: 3 }, gap: 2 }}>
-//         {/* --- 1. Logo Section --- */}
+//         {/* Logo Section */}
 //         <Box display="flex" alignItems="center">
 //           <Box
 //             component="img"
@@ -72,11 +65,11 @@
 //           />
 //         </Box>
 
-//         {/* --- 2. Mobile Menu (Hamburger) --- */}
+//         {/* Mobile Menu */}
 //         <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }, justifyContent: "flex-end" }}>
 //           <IconButton
 //             size="large"
-//             aria-label="account of current user"
+//             aria-label="menu"
 //             aria-controls="menu-appbar"
 //             aria-haspopup="true"
 //             onClick={handleOpenNavMenu}
@@ -87,20 +80,12 @@
 //           <Menu
 //             id="menu-appbar"
 //             anchorEl={anchorElNav}
-//             anchorOrigin={{
-//               vertical: "bottom",
-//               horizontal: "left",
-//             }}
+//             anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
 //             keepMounted
-//             transformOrigin={{
-//               vertical: "top",
-//               horizontal: "left",
-//             }}
+//             transformOrigin={{ vertical: "top", horizontal: "left" }}
 //             open={Boolean(anchorElNav)}
 //             onClose={handleCloseNavMenu}
-//             sx={{
-//               display: { xs: "block", md: "none" },
-//             }}
+//             sx={{ display: { xs: "block", md: "none" } }}
 //           >
 //             {navItems.map((item) => (
 //               <MenuItem key={item.label} onClick={item.onClick}>
@@ -112,11 +97,11 @@
 //           </Menu>
 //         </Box>
 
-//         {/* --- 3. Desktop Navigation Links --- */}
+//         {/* Desktop Navigation */}
 //         <Box
 //           sx={{
 //             flexGrow: 1,
-//             display: { xs: "none", md: "flex" }, // Hide on mobile, show on desktop
+//             display: { xs: "none", md: "flex" },
 //             justifyContent: "center",
 //             gap: { xs: 2, sm: 4 },
 //             "& .MuiButton-root": {
@@ -135,9 +120,6 @@
 //             </Button>
 //           ))}
 //         </Box>
-
-//         {/* --- 4. Get a Quote Button --- */}
- 
 //       </Toolbar>
 //     </AppBar>
 //   );
@@ -180,20 +162,38 @@ const Navbar = ({ onHomeClick, onCoursesClick, onConsultancyClick }) => {
   const goHomeAndScroll = (hash) => {
     handleCloseNavMenu();
 
-    if (location.pathname === "/") {
-      if (hash === "#courses") onCoursesClick?.();
-      else if (hash === "#consultancy") onConsultancyClick?.();
-      else onHomeClick?.();
+    // 💡 FIX: Introduce a small delay for the scroll action on mobile
+    // to allow the Menu component to fully close and avoid interference.
+    const scrollAction = () => {
+      if (location.pathname === "/") {
+        if (hash === "#courses") onCoursesClick?.();
+        else if (hash === "#consultancy") onConsultancyClick?.();
+        else onHomeClick?.();
+      } else {
+        navigate(`/${hash}`);
+      }
+    };
+
+    // Delay the scroll action only when the menu is open (mobile view)
+    if (anchorElNav) {
+      setTimeout(scrollAction, 100); // 100ms should be enough
     } else {
-      navigate(`/${hash}`);
+      // Execute immediately on desktop (where the menu isn't used)
+      scrollAction();
     }
   };
 
   const handleNavigation = (path) => {
     handleCloseNavMenu();
-    navigate(path);
+    // No need to delay navigation to a new page, but we'll include a small one for consistency
+    if (anchorElNav) {
+        setTimeout(() => navigate(path), 50);
+    } else {
+        navigate(path);
+    }
   };
 
+  // ... rest of the component remains the same ...
   const navItems = [
     { label: "Home", onClick: () => goHomeAndScroll("") },
     { label: "Courses", onClick: () => goHomeAndScroll("#courses") },
@@ -203,7 +203,8 @@ const Navbar = ({ onHomeClick, onCoursesClick, onConsultancyClick }) => {
   ];
 
   return (
-    <AppBar position="static" color="default" elevation={1} sx={{ borderRadius: 0 }}>
+    // ... rest of the JSX remains the same ...
+    <AppBar position="static" color="transparent" elevation={1} sx={{ borderRadius: 0,bgcolor: "#ffffff", 	}}>
       <Toolbar sx={{ px: { xs: 1.5, sm: 3 }, gap: 2 }}>
         {/* Logo Section */}
         <Box display="flex" alignItems="center">

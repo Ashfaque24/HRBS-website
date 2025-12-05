@@ -70,34 +70,12 @@ const Footer = () => {
           textAlign: { xs: "center", md: "right" },
         }}
       >
-        {/* Social icons */}
-        <Box
-          sx={{
-            display: "flex",
-            gap: 1.5,
-            justifyContent: "center",
-          }}
-        >
-          <IconButton color="inherit" size="small">
-            <FacebookIcon fontSize="medium" />
-          </IconButton>
-          <IconButton color="inherit" size="small">
-            <LinkedInIcon fontSize="medium" />
-          </IconButton>
-          <IconButton color="inherit" size="small">
-            <InstagramIcon fontSize="medium" />
-          </IconButton>
-          <IconButton color="inherit" size="small">
-            <TwitterIcon fontSize="medium" />
-          </IconButton>
-        </Box>
-
         <Typography variant="body2" sx={{ fontSize: { xs: 14, md: 16 } }}>
-          Near Calicut International Airport, Kerala, India
+        Malappuram, Kerala, India 673647
         </Typography>
 
         <Typography variant="body2" sx={{ fontSize: { xs: 14, md: 16 } }}>
-          +91 7356 978 602
+        +918593889155
         </Typography>
 
         <MuiLink
