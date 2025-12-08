@@ -61,14 +61,14 @@ const CoursesSection = () => {
           variant="h4"
           sx={{ fontWeight: 700, mb: 1, fontSize: { xs: 24, md: 32 } }}
         >
-          Our Premier Professional Courses
+          The HRBS Learning Suite Description
         </Typography>
         <Typography
           variant="body1"
           sx={{ color: "text.secondary", maxWidth: 520, mx: "auto" }}
         >
-          Comprehensive training programs designed by industry experts to
-          advance your HR career.
+          Equip yourself with real-world HR skills. Take the first step toward becoming a High-Agency professional.
+
         </Typography>
       </Box>
 

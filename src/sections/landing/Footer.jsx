@@ -54,8 +54,7 @@ const Footer = () => {
             textAlign: { xs: "center", md: "left" },
           }}
         >
-          Empowering HR professionals with world-class education and consultancy
-          services to drive organizational excellence.
+          Join us to transform the People of workplace from undervalued to undeniable.
         </Typography>
       </Box>
 

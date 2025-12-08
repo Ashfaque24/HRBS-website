@@ -37,7 +37,7 @@ const AboutUs = () => {
             zIndex: 1,
           }}
         >
-          Nice To Meet You
+          Here is More About us
         </Typography>
       </Box>
 
@@ -76,7 +76,8 @@ const AboutUs = () => {
             variant="h6"
             sx={{ fontWeight: 600, mb: 2, color: "#1f2933" }}
           >
-            HRBS (HR B-School)
+            HRBS (Human Resources Business School
+            )
           </Typography>
 
           <Typography

@@ -39,14 +39,14 @@ const ConsultancySection = () => {
           variant="h4"
           sx={{ fontWeight: 700, mb: 1, fontSize: { xs: 24, md: 32 } }}
         >
-          Explore Our Services To Now How We Can Collaborate
+          Discover How We Collaborate Description
         </Typography>
         <Typography
           variant="body1"
           sx={{ color: "text.secondary", maxWidth: 600, mx: "auto" }}
         >
-          Comprehensive HR solutions tailored to your organization&apos;s unique
-          needs.
+          Transform your workforce into a growth engine. Discover how our specialized expertise can elevate your organization's performance.
+
         </Typography>
       </Box>
 
