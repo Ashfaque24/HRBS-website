@@ -1,10 +1,5 @@
-// src/sections/common/Footer.jsx
 import React from "react";
 import { Box, Typography, IconButton, Link as MuiLink } from "@mui/material";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import Logo from "../../assets/Short Logo.png";
 
 const Footer = () => {
@@ -14,14 +9,13 @@ const Footer = () => {
       sx={{
         bgcolor: "#111",
         color: "#fff",
-        px: { xs: 3, md: 8 },
-        py: { xs: 4, md: 4 },
-        // mt: 6,
+        px: { xs: 2, md: 4 },
+        py: { xs: 2, md: 2 }, // Reduced vertical padding
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         justifyContent: "space-between",
         alignItems: { xs: "center", md: "center" },
-        gap: { xs: 4, md: 3 },
+        gap: { xs: 2, md: 2 }, // Reduced gap
         textAlign: { xs: "center", md: "left" },
       }}
     >
@@ -39,18 +33,18 @@ const Footer = () => {
           src={Logo}
           alt="HRBS Logo"
           sx={{
-            height: { xs: 60, md: 80 },
-            width: { xs: 120, md: 150 },
-            mb: 2,
+            height: { xs: 40, md: 60 }, // Reduced image height
+            width: { xs: 80, md: 120 },
+            mb: 1, // Reduced margin
           }}
         />
 
         <Typography
           variant="body2"
           sx={{
-            mb: 2,
-            fontSize: { xs: 14, md: 16 },
-            lineHeight: 1.6,
+            mb: 1, // Reduced margin
+            fontSize: { xs: 12, md: 14 }, // Reduced font size
+            lineHeight: 1.5,
             textAlign: { xs: "center", md: "left" },
           }}
         >
@@ -63,18 +57,18 @@ const Footer = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: 1.5,
+          gap: 1,
           width: { xs: "100%", md: "auto" },
           alignItems: { xs: "center", md: "flex-end" },
           textAlign: { xs: "center", md: "right" },
         }}
       >
-        <Typography variant="body2" sx={{ fontSize: { xs: 14, md: 16 } }}>
-        Malappuram, Kerala, India 673647
+        <Typography variant="body2" sx={{ fontSize: { xs: 12, md: 14 } }}>
+          Malappuram, Kerala, India 673647
         </Typography>
 
-        <Typography variant="body2" sx={{ fontSize: { xs: 14, md: 16 } }}>
-        +918593889155
+        <Typography variant="body2" sx={{ fontSize: { xs: 12, md: 14 } }}>
+          +918593889155
         </Typography>
 
         <MuiLink
@@ -83,8 +77,8 @@ const Footer = () => {
           color="inherit"
           sx={{
             fontWeight: 700,
-            fontSize: { xs: 18, md: 20 },
-            mt: { xs: 1, md: 0 },
+            fontSize: { xs: 14, md: 16 }, // Reduced font size
+            mt: { xs: 0.5, md: 0 },
           }}
         >
           connect@hrbschool.in

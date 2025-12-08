@@ -99,17 +99,7 @@ const ConsultancySection = () => {
                 >
                   {service.description}
                 </Typography>
-                <Link
-                  href="#"
-                  underline="none"
-                  sx={{
-                    fontWeight: 600,
-                    color: "#1d4ed8",
-                    fontSize: 14,
-                  }}
-                >
-                  Learn More →
-                </Link>
+           
               </CardContent>
             </Card>
           </Grid>

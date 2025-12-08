@@ -3,7 +3,7 @@ import React from "react";
 import { Box, Typography, Button, Stack } from "@mui/material";
 // Import useNavigate/useLocation
 import { useNavigate, useLocation } from "react-router-dom";
-import HeroBg from "../../assets/office logo 2.jpg";
+import HeroBg from "../../assets/header1.png";
 
 // Remove props: { onCoursesClick, onConsultancyClick }
 function Headersection() {
@@ -26,7 +26,7 @@ function Headersection() {
       sx={{
         // ... (Your existing styling)
         position: "relative",
-        minHeight: { xs: "90vh", sm: "100vh" },
+        minHeight: { xs: "90vh", sm: "90vh" },
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

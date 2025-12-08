@@ -28,7 +28,7 @@ const Contact = () => {
       {/* --- 1. Top Banner --- */}
       <Box
         sx={{
-          height: { xs: 200, md: 300 },
+          height: { xs: 180, md: 300 },
           position: "relative",
           backgroundImage: `url(${contact1})`,
           backgroundSize: "cover",
@@ -48,12 +48,13 @@ const Contact = () => {
         }}
       >
         <Typography
-          variant="h3"
+          variant="h4"
           sx={{
             fontWeight: 700,
             textAlign: "center",
             color: "#fff",
             zIndex: 1,
+            fontSize: { xs: "1.5rem", md: "2.5rem" },
           }}
         >
           Contact Us
