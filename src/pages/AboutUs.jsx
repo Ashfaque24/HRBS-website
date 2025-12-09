@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import aboutusimg1 from "../assets/About  us/about us image 1.jpg";
-import founder from "../assets/About  us/CEO1.jpg";
-import aboutusimage2 from "../assets/About  us/aboutus3.png";
-import founder2 from "../assets/About  us/CEO2.jpg";
+import aboutusimg1 from "../assets/About  us/about us image 1.webp";
+import founder from "../assets/About  us/CEO1.webp";
+import aboutusimage2 from "../assets/About  us/aboutus3.webp";
+import founder2 from "../assets/About  us/CEO2.webp";
 
 const AboutUs = () => {
   return (

@@ -1,12 +1,12 @@
 import React from "react";
 import { Box, Typography, Grid, Card, CardMedia, CardContent } from "@mui/material";
 
-import course1 from "../../assets/courses/hrbs c 1.png";
-import course2 from "../../assets/courses/hrbs c 2.png";
-import course3 from "../../assets/courses/hrbs c 3.png";
-import course4 from "../../assets/courses/hrbs c 4.png";
-import course5 from "../../assets/courses/hrbs c 5.png";
-import course6 from "../../assets/courses/hrbs c 6.png";
+import course1 from "../../assets/courses/hrbs c 1.webp";
+import course2 from "../../assets/courses/hrbs c 2.webp";
+import course3 from "../../assets/courses/hrbs c 3.webp";
+import course4 from "../../assets/courses/hrbs c 4.webp"
+import course5 from "../../assets/courses/hrbs c 5.webp";
+import course6 from "../../assets/courses/hrbs c 6.webp";
 
 const courses = [
   {

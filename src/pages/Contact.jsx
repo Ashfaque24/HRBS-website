@@ -9,7 +9,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 
-import contact1 from "../assets/Contact/contact.jpg";
+import contact1 from "../assets/Contact/contact.webp";
 
 // Define your social media links and contact info here for easy management
 const CONTACT_INFO = {
