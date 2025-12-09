@@ -223,6 +223,7 @@ const Navbar = ({ onHomeClick, onCoursesClick, onConsultancyClick }) => {
             variant="contained"
             color="primary"
             flexShrink={0} 
+            
             sx={{
               fontSize: { xs: 12, sm: 14 },
               px: { xs: 1, sm: 2 },
@@ -231,7 +232,7 @@ const Navbar = ({ onHomeClick, onCoursesClick, onConsultancyClick }) => {
               whiteSpace: "nowrap", 
               // 💡 REFINEMENT: Hide this button on small screens (xs) where the mobile menu is open, 
               // as the button is now inside the menu.
-              display: { xs: 'none', sm: 'inline-flex', md: 'inline-flex' }
+              display: { xs: 'none',  lg: 'inline-flex' }
             }}
           >
             {ctaItem.label}
