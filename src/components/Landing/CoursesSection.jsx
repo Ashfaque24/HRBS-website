@@ -61,7 +61,7 @@ const CoursesSection = () => {
           variant="h4"
           sx={{ fontWeight: 700, mb: 1, fontSize: { xs: 24, md: 32 } }}
         >
-          The HRBS Learning Suite Description
+          The HRBS Learning Suite 
         </Typography>
         <Typography
           variant="body1"

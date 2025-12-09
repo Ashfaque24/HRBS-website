@@ -39,7 +39,7 @@ const ConsultancySection = () => {
           variant="h4"
           sx={{ fontWeight: 700, mb: 1, fontSize: { xs: 24, md: 32 } }}
         >
-          Discover How We Collaborate Description
+          Discover How We Collaborate
         </Typography>
         <Typography
           variant="body1"
